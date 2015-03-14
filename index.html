@@ -1,0 +1,328 @@
+<!doctype html>
+<html ng-app="Tiger" ng-controller="AppController">
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <!--  <a class="navbar-brand" href="/"></a>-->
+        </div>
+
+        <!-- directionals on isHome -->
+        <a href="http://www.sherriberryapps.com" target="_blank">
+            <img src="http://img.photobucket.com/albums/v435/ocinrime/tiger%20app.png" border="0" alt="photo tiger app.png" />
+        </a>
+        <ul class="nav navbar-nav navbar-right">
+            <li> <a href="#home" ng-class="{ on: isHome }">Home</a>
+            </li>
+            <li> <a href="#about" ng-class="{ on: isAbout }">About</a>
+            </li>
+            <li> <a href="#budget" ng-class="{ on: isBudget }">Budget</a>
+            </li>
+            <li><a href="#contact" ng-class="{ on: isContact }">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<p>
+    <!--   Current Render Action:
+
+
+       bind the content of the Strong element to
+            the scope-level model, renderAction. Then, when this gets
+            set in the Controller, it will be updated here
+
+    <strong ng-bind="renderAction">Unknown</strong>
+  </p>
+
+  
+        For the navigation, we'll be conditionally adding the "on"
+        class based on the state of the current scope.
+    -->
+
+
+    <!--
+        When the route changes, we're going to be setting up the
+        renderPath - an array of values that help define how the
+        page is going to be rendered. We can use these values to
+        conditionally show / load parts of the page.
+    -->
+<div ng-switch on="renderPath[ 0 ]">
+
+    <!-- Home Content -->
+    <div ng-switch-when="home">
+
+        <p>
+        <div class="page-header">
+            <h1>Smart money for creatives <small>... because it's your money</small></h1>
+        </div>
+        <!--    <p>
+        Sub-path: <em>{{ renderPath[ 1 ] }}</em>home
+      </p> -->
+
+        <!-- tiger button for budget form -->
+
+        <div class="Tigertron">
+            <div class="container">
+                <h1>Get started!</h1>
+                <img src="http://i306.photobucket.com/albums/nn260/roosterwooster/tiger.jpg" alt="tiger" style="width: 100%">
+                <div>
+                    <br>
+                    <p><a class="btn btn-primary btn-md" href="#budget" role="button">It's easy. Really.</a>
+                    </p>
+                </div>
+
+                <!--subhed -->
+                <div>
+                    <p>Just because you're a writer, artist, musician, art historian ... you get the idea ... doesn't mean a lifetime of scraping by. Save, invest and budget with TigerApp.</p>
+                </div>
+            </div>
+        </div>
+        <!-- bottom third of the page -->
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Illustration</h2>
+                    <p>
+                        <a href="http://photobucket.com/" target="_blank">
+                            <img src="http://i306.photobucket.com/albums/nn260/roosterwooster/leoflores.jpg" border="2" height="200" width="200" alt=" photo leoflores.jpg" />
+                        </a>
+                    </p>
+                    <p><a class="btn btn-default" href="#" role="button">By Leo Flores</a>
+                    </p>
+
+                </div>
+                <div class="col-md-4">
+                    <h2>Illustration</h2>
+                    <p>
+                        <a href="http://photobucket.com/" target="_blank">
+                            <img src="http://i306.photobucket.com/albums/nn260/roosterwooster/laurahughes.jpg" border="2" height="200" width="200" alt=" photo laurahughes.jpg" />
+                        </a>
+                    </p>
+                    <p><a class="btn btn-default" href="#" role="button">By Laura Hughes</a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Photography</h2>
+                    <p>
+                        <a href="http://photobucket.com/" target="_blank">
+                            <img src="http://img.photobucket.com/albums/v435/ocinrime/IMG_0932.jpg" border="2" height="200" width="200" alt=" photo laurahughes.jpg" />
+                        </a>
+                    </p>
+                    <p><a class="btn btn-default" href="#" role="button">By Ralia</a>
+                    </p>
+                </div>
+            </div>
+
+            <hr>
+            <br>
+            <br>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2><i>Reborn</i> by Ben Jahn of Richmond</h2>
+                        <p>At the Reborn Convention at the Creektown Holiday Inn, the women mill and mingle, fawn over mohair follicles, blue-blotched underpainting, voice-boxes uploaded with found sound. Distant crying. Summer afternoon nap meltdowns. I'm the
+                            only man, and I sense their suspicion. I feel lost. I eat a tasteless finger sandwich. I touch a doll with the back of my hand. A pamphlet explains: Real Baby Heater Systems.</p>
+                        <p><a class="btn btn-default" href="http://www.npr.org/2013/06/09/189330731/three-minute-fiction-the-round-11-winner-is" role="button">Read</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2><i>Pomelo</i> by Sara Maria Greene</h2>
+                        <p>The man was so beautiful. He appeared to be stepping out of the ad on the side of the bus, his hair illuminated in sun. Amelia saw the little slip of paper burst from his pocket when he pulled out his keys. It flipped in the air once,
+                            twice before it caught against the cement stairs right in front of her. She quickly shut her mailbox with the very tiny key that made her feel oversized and fumbling.
+
+                        </p>
+                        <p><a class="btn btn-default" href="http://www.npr.org/2013/06/08/187905504/the-pomelo" role="button">Read</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2><i>Sorry for Your Loss</i> by Lisa Rubenson</h2>
+                        <p>Hi, it's me — Christine. I can't believe you still have this number. That I still remember it. But there's your voice on the machine ... like no time has passed. I'm so sorry for your loss, Nick, for your mom. Can anyone else hear this?
+                            [PRESS # TO ERASE AND RERECORD YOUR MESSAGE] # Hi Nick, it's Christine. Christine Williams. Remember? It's been a long time. I called because — I know it's tough right now. I'm sorry to hear about the death of ... that your mom passed
+                            — try and say something real. [PRESS # TO ERASE AND RE-RECORD YOUR MESSAGE]</p>
+                        <p><a class="btn btn-default" href="http://www.npr.org/2013/03/09/173722517/sorry-for-your-loss" role="button">Read</a>
+                        </p>
+                    </div>
+                </div>
+
+                <hr>
+                <!-- footer -->
+                <footer>
+                    <p><a href="http://www.SherriCruz.com">&copy; SherriBerryApps 2015</a>
+                    </p>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- about content -->
+    <div ng-switch-when="about">
+
+        <div>
+            <h1>About</h1>
+            <h4>Hey, this isn't about us. It's about <span class="text-danger"><em>you.</em></span></h4>
+        </div>
+        <!--  <p>
+        Sub-path: <em>{{ renderPath[ 1 ] }}</em>about
+      </p>-->
+
+    </div>
+
+    <!-- budget content -->
+    <div ng-switch-when="budget">
+
+        <h1>Monthly household budget</h1>
+        <form name="budgetForm">
+            <!-- <form name="budgetForm" ng-controller="FormController" class="my-form">-->
+            <label>Rent or mortgage</label>
+
+            <input type="number" ng-model="user.rent" name="rent" required>
+            <br>
+            <br>
+
+            <label>Utilities</label>
+                <input type="number" ng-model="user.utilities" name="utilities" required>
+            <br>
+            <br>
+
+            <label>Auto payment</label>
+            <input type="number" ng-model="user.autoPayment" name="autoPayment" required>
+            <br>
+            <br>
+
+            <input type="submit" value="Save" class="btn btn-primary btn-lg">
+            <br>
+            <br>
+        </form>
+    </div>
+    <!-- <p>
+    Sub-path: <em>{{ renderPath[ 1 ] }}</em>budget
+  </p> -->
+
+    <!-- contact content -->
+    <div ng-switch-when="contact">
+        <div class="center-div-txt">
+            <h1>Contact</h1>
+            <h6><p>SherriBerryApps</p> </h6>
+            <h7>
+                <p>1 MerryGoRound Lane
+                    <br>Cocoaleaf, Calif.</p>
+            </h7>
+            <h4><p><a href="mailto:Sherri@SherriCruz.com">email</a></p> </h4>
+        </div>
+
+        <!--
+      <p>
+        Sub-path: <em>{{ renderPath[ 1 ] }}</em>contact
+      </p> -->
+
+    </div>
+
+</div>
+
+<!-- Load AngularJS from the CDN. -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js">
+</script>
+<script type="text/javascript">
+    // application module
+    var Tiger = angular.module("Tiger", []);
+
+    // Configure the routing. The $routeProvider will be
+    // automatically injected into the configurator.
+    Tiger.config(
+            function($routeProvider) {
+
+                // mapping routes to render "Actions" not templates.
+                $routeProvider
+                        .when(
+                        "/home", {
+                            action: "home.default"
+                        }
+                )
+                        .when(
+                        "/about", {
+                            action: "about"
+                        }
+                )
+                        .when(
+                        "/budget", {
+                            action: "budget"
+                        }
+                )
+
+                        .when(
+                        "/contact", {
+                            action: "contact"
+                        }
+                )
+                        .otherwise({
+                            redirectTo: "/dashboard"
+                        });
+
+            }
+    );
+
+
+    // Define root-level controller for the application.
+    Tiger.controller("AppController",function($scope, $route, $routeParams)
+            {
+                // Update the rendering of the page.
+                render = function() {
+
+                    // Pull the "action" value out of the
+                    // currently selected route.
+                    var renderAction = $route.current.action;
+                    // updates the render path so that
+                    // we can start conditionally rendering parts
+                    // of the page.
+                    var renderPath = renderAction.split(".");
+                    // Reset the booleans used to set the class
+                    // for the navigation.
+                    var isHome = (renderPath[0] == "home");
+                    var isAbout = (renderPath[0] == "about");
+                    var isContact = (renderPath[0] == "contact");
+                    var isBudget = (renderPath[0] == "budget");
+
+                    // Store the values in the model.
+                    $scope.renderAction = renderAction;
+                    $scope.renderPath = renderPath;
+                    $scope.isHome = isHome;
+                    $scope.isAbout = isAbout;
+                    $scope.isBudget = isBudget;
+                    $scope.isContact = isContact;
+
+                };
+
+                // Listen for changes to the Route. When the route
+                // changes, set the renderAction model value
+
+                $scope.$on("$routeChangeSuccess", function($currentRoute, $previousRoute) {
+                            // Update the rendering.
+                            render();
+                        }
+                );
+            }
+    );
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script> -->
+<script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+<script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+
+</body>
+
+</html>

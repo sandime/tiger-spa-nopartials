@@ -1,0 +1,18 @@
+{
+  "name": "TigerApp",
+  "description": "Budget and money management for creatives",
+  "version": "0.0.0",
+  "homepage": "http://sherricruz.com",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "angular-loader": "1.2.x",
+    "angular-mocks": "~1.2.x",
+    "html5-boilerplate": "~4.3.0",
+    "bootstrap":"",
+    "jquery":"",
+    "angular-bootstrap-show-errors":""
+  }
+}
